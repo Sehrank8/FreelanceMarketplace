@@ -10,22 +10,29 @@ import com.FreelanceMarketplace.api.repository.JobRepository;
 import com.FreelanceMarketplace.api.service.impl.CommentService;
 import com.FreelanceMarketplace.api.service.impl.FreelancerService;
 import com.FreelanceMarketplace.api.service.impl.JobService;
-import jakarta.annotation.PostConstruct;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 
 import java.util.List;
 
 @Component
-public class DatabaseSeeder {
+public class DatabaseSeeder implements CommandLineRunner {
 
 
+    @Autowired
     private final FreelancerService freelancerService;
+    @Autowired
     private final JobService jobService;
+    @Autowired
     private final CommentService commentService;
+    @Autowired
     private final FreelancerRepository freelancerRepository;
+    @Autowired
     private final JobRepository jobRepository;
 
+    @Autowired
     public DatabaseSeeder(FreelancerService freelancerService, JobService jobService, CommentService commentService, FreelancerRepository freelancerRepository, JobRepository jobRepository) {
         this.freelancerService = freelancerService;
         this.jobService = jobService;
@@ -34,7 +41,7 @@ public class DatabaseSeeder {
         this.jobRepository = jobRepository;
     }
 
-    @PostConstruct
+
     public void seedDatabase() {
         if (!freelancerRepository.findAll().isEmpty()) {
             return;
@@ -125,5 +132,10 @@ public class DatabaseSeeder {
             commentService.createComment(comment);
         }
 
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+        seedDatabase();
     }
 }
