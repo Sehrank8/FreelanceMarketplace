@@ -119,6 +119,26 @@ When a new freelancer is created, a message is published to a RabbitMQ queue to 
 
 ---
 
+## 🛠️ Build & Run Instructions for FreelanceMarketplace
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/Sehrank8/FreelanceMarketplace.git
+cd FreelanceMarketplace
+```
+
+### 2. Build the project
+
+```bash
+./mvnw clean install
+```
+### 3. Set the application.properties according to your specifications.
+
+
+### 4. Run the project
+
+---
+
 ## Docker Support
 
 You can containerize the application and database using Docker:
