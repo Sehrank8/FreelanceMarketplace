@@ -1,0 +1,871 @@
+{
+	"info": {
+		"_postman_id": "045b7f1d-7667-483f-a44d-eb6e4c1905ef",
+		"name": "Freelance Marketplace API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43476226",
+		"_collection_link": "https://cloudy-robot-2897016.postman.co/workspace/%C5%9Eehran-Kartal's-Workspace~9c0b2215-fd79-4fc9-8227-dec40ddf544c/collection/43476226-045b7f1d-7667-483f-a44d-eb6e4c1905ef?action=share&source=collection_link&creator=43476226"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "job",
+					"item": [
+						{
+							"name": "update Job",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"description\": \"<string>\",\n  \"status\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/job/updateJob",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"job",
+										"updateJob"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"description\": \"<string>\",\n  \"status\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/job/updateJob",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"job",
+												"updateJob"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<string>"
+								}
+							]
+						},
+						{
+							"name": "create Job",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"freelancerId\": \"<long>\",\n  \"description\": \"<string>\",\n  \"status\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/job/createJob",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"job",
+										"createJob"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"freelancerId\": \"<long>\",\n  \"description\": \"<string>\",\n  \"status\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/job/createJob",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"job",
+												"createJob"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<string>"
+								}
+							]
+						},
+						{
+							"name": "get Jobs Of Freelancer",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/job/getJobsOfFreelancer?freelancerId=<long>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"job",
+										"getJobsOfFreelancer"
+									],
+									"query": [
+										{
+											"key": "freelancerId",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/job/getJobsOfFreelancer?freelancerId=<long>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"job",
+												"getJobsOfFreelancer"
+											],
+											"query": [
+												{
+													"key": "freelancerId",
+													"value": "<long>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<long>\",\n    \"freelancerId\": \"<long>\",\n    \"description\": \"<string>\",\n    \"status\": \"<string>\",\n    \"createdDate\": \"<dateTime>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"freelancerId\": \"<long>\",\n    \"description\": \"<string>\",\n    \"status\": \"<string>\",\n    \"createdDate\": \"<dateTime>\"\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "get Job",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/job/getJob?jobId=<long>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"job",
+										"getJob"
+									],
+									"query": [
+										{
+											"key": "jobId",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/job/getJob?jobId=<long>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"job",
+												"getJob"
+											],
+											"query": [
+												{
+													"key": "jobId",
+													"value": "<long>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"freelancerId\": \"<long>\",\n  \"description\": \"<string>\",\n  \"status\": \"<string>\",\n  \"createdDate\": \"<dateTime>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "freelancer",
+					"item": [
+						{
+							"name": "search Freelancer",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"city\": \"<string>\",\n  \"freelancerType\": \"<string>\",\n  \"designTools\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"specialties\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/freelancer/searchFreelancer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"freelancer",
+										"searchFreelancer"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"city\": \"<string>\",\n  \"freelancerType\": \"<string>\",\n  \"designTools\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"specialties\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/freelancer/searchFreelancer",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"freelancer",
+												"searchFreelancer"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"city\": \"<string>\",\n    \"freelancerType\": \"<string>\",\n    \"portfolioUrl\": \"<string>\",\n    \"designTools\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"softwareLanguages\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"specialties\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"evaluationScore\": \"<integer>\",\n    \"additionalNotes\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"city\": \"<string>\",\n    \"freelancerType\": \"<string>\",\n    \"portfolioUrl\": \"<string>\",\n    \"designTools\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"softwareLanguages\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"specialties\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"evaluationScore\": \"<integer>\",\n    \"additionalNotes\": \"<string>\"\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "create Freelancer",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"city\": \"<string>\",\n  \"freelancerType\": \"<string>\",\n  \"portfolioUrl\": \"<string>\",\n  \"designTools\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"softwareLanguages\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"specialties\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"additionalNotes\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/freelancer/createFreelancer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"freelancer",
+										"createFreelancer"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"city\": \"<string>\",\n  \"freelancerType\": \"<string>\",\n  \"portfolioUrl\": \"<string>\",\n  \"designTools\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"softwareLanguages\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"specialties\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"additionalNotes\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/freelancer/createFreelancer",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"freelancer",
+												"createFreelancer"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<string>"
+								}
+							]
+						},
+						{
+							"name": "get Freelancer",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/freelancer/getFreelancer?freelancerId=<long>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"freelancer",
+										"getFreelancer"
+									],
+									"query": [
+										{
+											"key": "freelancerId",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/freelancer/getFreelancer?freelancerId=<long>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"freelancer",
+												"getFreelancer"
+											],
+											"query": [
+												{
+													"key": "freelancerId",
+													"value": "<long>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"city\": \"<string>\",\n  \"freelancerType\": \"<string>\",\n  \"portfolioUrl\": \"<string>\",\n  \"designTools\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"softwareLanguages\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"specialties\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"evaluationScore\": \"<integer>\",\n  \"additionalNotes\": \"<string>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "get Freelancers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/freelancer/getAllFreelancers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"freelancer",
+										"getAllFreelancers"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/freelancer/getAllFreelancers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"freelancer",
+												"getAllFreelancers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"city\": \"<string>\",\n    \"freelancerType\": \"<string>\",\n    \"portfolioUrl\": \"<string>\",\n    \"designTools\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"softwareLanguages\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"specialties\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"evaluationScore\": \"<integer>\",\n    \"additionalNotes\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"email\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"city\": \"<string>\",\n    \"freelancerType\": \"<string>\",\n    \"portfolioUrl\": \"<string>\",\n    \"designTools\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"softwareLanguages\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"specialties\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"evaluationScore\": \"<integer>\",\n    \"additionalNotes\": \"<string>\"\n  }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "comment",
+					"item": [
+						{
+							"name": "update Comment",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"comment\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/comment/updateComment",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"comment",
+										"updateComment"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<long>\",\n  \"comment\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/comment/updateComment",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"comment",
+												"updateComment"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<string>"
+								}
+							]
+						},
+						{
+							"name": "create Comment",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"jobId\": \"<long>\",\n  \"commenterName\": \"<string>\",\n  \"comment\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/comment/createComment",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"comment",
+										"createComment"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"jobId\": \"<long>\",\n  \"commenterName\": \"<string>\",\n  \"comment\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/comment/createComment",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"comment",
+												"createComment"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<string>"
+								}
+							]
+						},
+						{
+							"name": "get Comments Of Job",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/comment/getCommentsOfJob?jobId=<long>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"comment",
+										"getCommentsOfJob"
+									],
+									"query": [
+										{
+											"key": "jobId",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/comment/getCommentsOfJob?jobId=<long>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"comment",
+												"getCommentsOfJob"
+											],
+											"query": [
+												{
+													"key": "jobId",
+													"value": "<long>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<long>\",\n    \"jobId\": \"<long>\",\n    \"commenterName\": \"<string>\",\n    \"createdDate\": \"<dateTime>\",\n    \"comment\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"jobId\": \"<long>\",\n    \"commenterName\": \"<string>\",\n    \"createdDate\": \"<dateTime>\",\n    \"comment\": \"<string>\"\n  }\n]"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://freelancemarketplace.onrender.com",
+			"type": "string"
+		}
+	]
+}
